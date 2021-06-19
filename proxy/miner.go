@@ -14,10 +14,10 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 )
 
-var ecip1099FBlock uint64 = 11700000 // classic mainnet
-// var ecip1099FBlock uint64 = 2520000 // mordor
+var ecip1099FBlockClassic uint64 = 11700000 // classic mainnet
+var ecip1099FBlockMordor uint64 = 2520000   // mordor
 
-var hasher = etchash.New(&ecip1099FBlock)
+var hasher *etchash.Etchash = nil
 
 type Miner struct {
 	sync.RWMutex
