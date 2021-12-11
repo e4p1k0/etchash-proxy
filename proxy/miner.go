@@ -15,9 +15,9 @@ import (
 )
 
 var ecip1099FBlockClassic uint64 = 11700000 // classic mainnet
-var ecip1099FBlockMordor uint64 = 2520000   // mordor
+// var ecip1099FBlockMordor uint64 = 2520000   // mordor
 
-var hasher *etchash.Etchash = nil
+var hasher = etchash.New(&ecip1099FBlockClassic, nil)
 
 type Miner struct {
 	sync.RWMutex
